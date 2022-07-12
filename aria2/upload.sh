@@ -8,7 +8,7 @@ Thread="4";  #默认4线程，自行修改，服务器配置不好的话，不�
 Block="20";  #默认分块20m，自行修改
 RemoteDIR="TempDown";  #上传到Onedrive的路径，默认为根目录，如果要上传到MOERATS目录，""里面请填成MOERATS
 LocalDIR="/root/auto-upload/downloads/";  #Aria2下载目录，记得最后面加上/
-Uploader="/root/auto-upload/upload/OneDriveUploader";  #上传的程序完整路径，默认为本文安装的目录
+Uploader="/root/auto-upload/upload/OneDriveUploader";  #上传的程序完整路径
 Config="/root/auto-upload/upload/auth.json";  #OneDriveUploader初始化生成的配置auth.json绝对路径
 
 
