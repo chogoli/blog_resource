@@ -158,7 +158,7 @@ LICENSE
             exit 1
         }
     done
-    wget https://file.uuufo.xyz/linux-sh/auto-upload/aria2.conf -O /root/.aria2c/aria2.conf
+    wget https://raw.githubusercontent.com/chogoli/blog_resource/main/aria2/aria2.conf -O /root/.aria2c/aria2.conf
     sed -i "s@^\(dir=\).*@\1${download_path}@" ${aria2_conf}
     sed -i "s@/root/.aria2/@${aria2_conf_dir}/@" ${aria2_conf_dir}/*.conf
     sed -i "s@^\(rpc-secret=\).*@\1$(date +%s%N | md5sum | head -c 20)@" ${aria2_conf}
@@ -274,7 +274,7 @@ Install_aria2() {
     echo -e "${Info} 开始创建 下载目录..."
     mkdir -p ${download_path}
     Install_upload
-    wget https://file.uuufo.xyz/linux-sh/auto-upload/upload.sh -P /root/auto-upload/upload/
+    wget https://raw.githubusercontent.com/chogoli/blog_resource/main/aria2/upload.sh -P /root/auto-upload/upload/
     chmod +x /root/auto-upload/upload/upload.sh
     echo -e "${Info} 所有步骤 安装完毕，开始启动..."
     Start_aria2
